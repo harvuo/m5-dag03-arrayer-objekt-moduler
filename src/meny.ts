@@ -40,7 +40,8 @@ export function billigast(meny: Ratt[]): Ratt | undefined {
 // 6. Sortera efter pris, billigast först. Returnerar en NY array.
 //    Den ursprungliga listan får INTE ändras (sort ändrar originalet, så kopiera först).
 export function sorteraEfterPris(meny: Ratt[]): Ratt[] {
-  // TODO
+  const sorteradMeny: Ratt[] = [...meny];
+  return sorteradMeny.sort((a, b) => a.pris - b.pris);
 }
 
 // 7. Totalpris för en order. order = [{ id: 1, antal: 2 }, { id: 5, antal: 1 }]
